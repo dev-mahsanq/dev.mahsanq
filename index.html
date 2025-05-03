@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio :: Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="button close"></span>
+                <span class="button minimize"></span>
+                <span class="button maximize"></span>
+            </div>
+            <div class="terminal-title">user@portfolio: ~</div>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+            <section id="welcome">
+                <p><span class="prompt">></span> Welcome to my interactive portfolio.</p>
+                <p><span class="prompt">></span> Type 'help' for available commands.</p>
+                <!-- Initial content or animation here -->
+            </section>
+
+            <section id="about" class="hidden">
+                 <h2><span class="prompt">></span> about_me</h2>
+                 <p>Software developer passionate about creating interactive and efficient applications...</p>
+                 <!-- Add more details -->
+            </section>
+
+            <section id="skills" class="hidden">
+                 <h2><span class="prompt">></span> skills</h2>
+                 <ul>
+                     <li>Languages: JavaScript, Python, ...</li>
+                     <li>Frameworks: React, Node.js, ...</li>
+                     <li>Tools: Git, Docker, ...</li>
+                 </ul>
+            </section>
+
+            <section id="projects" class="hidden">
+                 <h2><span class="prompt">></span> projects</h2>
+                 <div>
+                     <h3>Project 1</h3>
+                     <p>Description of project 1...</p>
+                     <a href="#">Link</a>
+                 </div>
+                 <!-- Add more projects -->
+            </section>
+
+            <section id="experience" class="hidden">
+                <h2><span class="prompt">></span> experience</h2>
+                <div>
+                    <h3>Job Title - Company (Year-Year)</h3>
+                    <p>Description of role and achievements...</p>
+                </div>
+                <!-- Add more experience -->
+            </section>
+
+            <section id="contact" class="hidden">
+                 <h2><span class="prompt">></span> contact</h2>
+                 <p>Email: your.email@example.com</p>
+                 <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+                 <p>GitHub: <a href="#">github.com/yourusername</a></p>
+            </section>
+
+            <div class="input-line">
+                <span class="prompt">></span> <span id="input" contenteditable="true" spellcheck="false"></span><span class="cursor">_</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- For interactivity later -->
+</body>
+</html>
