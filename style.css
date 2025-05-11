@@ -1,6 +1,6 @@
 body {
-    background-color: #1a1a1a; /* Dark background */
-    color: #00ff00; /* Green text */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text */
     font-family: 'Fira Code', 'Roboto Mono', monospace; /* Monospace font */
     margin: 0;
     padding: 20px;
@@ -11,21 +11,21 @@ body {
 }
 
 .terminal-window {
-    background-color: #0d0d0d; /* Slightly darker terminal background */
-    border: 1px solid #333;
+    background-color: #f8f8f8; /* Light gray terminal background */
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 20px rgba(230, 30, 77, 0.1);
     width: 80%;
     max-width: 900px;
     overflow: hidden;
 }
 
 .terminal-header {
-    background-color: #333;
+    background-color: #e61e4d;
     padding: 8px 12px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #c4183c;
 }
 
 .terminal-buttons {
@@ -46,7 +46,7 @@ body {
 .button.maximize { background-color: #27c93f; }
 
 .terminal-title {
-    color: #ccc;
+    color: #ffffff;
     font-size: 0.9em;
     text-align: center;
     flex-grow: 1; /* Allows title to take available space */
@@ -57,6 +57,7 @@ body {
     height: 500px; /* Adjust as needed */
     overflow-y: auto;
     line-height: 1.6;
+    color: #333;
 }
 
 /* Hide sections by default */
@@ -65,7 +66,7 @@ body {
 }
 
 h2 {
-    color: #00ffcc; /* Cyan for headings */
+    color: #e61e4d; /* Red for headings */
     font-weight: bold;
     margin-top: 1em;
     margin-bottom: 0.5em;
@@ -78,11 +79,11 @@ ul {
 
 li::before {
     content: '* ';
-    color: #00ff00;
+    color: #e61e4d;
 }
 
 a {
-    color: #00aaff; /* Blue for links */
+    color: #e61e4d; /* Red for links */
     text-decoration: none;
 }
 
@@ -91,7 +92,7 @@ a:hover {
 }
 
 .prompt {
-    color: #00ff00; /* Green prompt */
+    color: #e61e4d; /* Red prompt */
     margin-right: 8px;
     font-weight: bold;
 }
@@ -104,7 +105,7 @@ a:hover {
 #input {
     background: none;
     border: none;
-    color: #00ff00;
+    color: #333;
     font-family: inherit;
     font-size: inherit;
     outline: none;
@@ -114,7 +115,7 @@ a:hover {
 
 .cursor {
     display: inline-block;
-    background-color: #00ff00;
+    background-color: #e61e4d;
     width: 8px; /* Adjust width as needed */
     height: 1.2em; /* Match line height */
     margin-left: 2px;
@@ -128,17 +129,84 @@ a:hover {
     }
 }
 
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 60px 0;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.testimonials h2 {
+    color: #e61e4d;
+    margin-bottom: 40px;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-card {
+    flex: 0 0 350px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(230,30,77,0.1);
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.client-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #e61e4d;
+}
+
+.client-quote {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.client-name {
+    color: #e61e4d;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.client-role {
+    color: #999;
+    font-size: 0.9em;
+}
+
 /* Basic Scrollbar Styling (optional) */
 .terminal-body::-webkit-scrollbar {
     width: 8px;
 }
 
 .terminal-body::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: #f8f8f8;
 }
 
 .terminal-body::-webkit-scrollbar-thumb {
-    background-color: #00ff00;
+    background-color: #e61e4d;
     border-radius: 4px;
-    border: 2px solid #1a1a1a;
+    border: 2px solid #f8f8f8;
 }
