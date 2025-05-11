@@ -3,76 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio :: Terminal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tech Agency | Simple Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: #181818;
+            color: #fff;
+        }
+        header {
+            background: #111;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00e6e6;
+            letter-spacing: 2px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #00e6e6;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px 20px;
+            background: linear-gradient(120deg, #00e6e6 0%, #181818 100%);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        .cta-btn {
+            background: #00e6e6;
+            color: #181818;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover {
+            background: #00b3b3;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .service-card {
+            background: #222;
+            border-radius: 16px;
+            padding: 30px 20px;
+            flex: 1 1 250px;
+            min-width: 250px;
+            max-width: 32%;
+            box-shadow: 0 4px 16px rgba(0,230,230,0.05);
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.03);
+        }
+        .service-card h3 {
+            color: #00e6e6;
+            margin-bottom: 10px;
+        }
+        .contact {
+            background: #111;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .contact h2 {
+            color: #00e6e6;
+            margin-bottom: 20px;
+        }
+        .contact p {
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 900px) {
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-card {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="terminal-window">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="button close"></span>
-                <span class="button minimize"></span>
-                <span class="button maximize"></span>
-            </div>
-            <div class="terminal-title">user@portfolio: ~</div>
-        </div>
-        <div class="terminal-body" id="terminalBody">
-            <section id="welcome">
-                <p><span class="prompt">></span> Welcome to my interactive portfolio.</p>
-                <p><span class="prompt">></span> Type 'help' for available commands.</p>
-                <!-- Initial content or animation here -->
-            </section>
-
-            <section id="about" class="hidden">
-                 <h2><span class="prompt">></span> about_me</h2>
-                 <p>Software developer passionate about creating interactive and efficient applications...</p>
-                 <!-- Add more details -->
-            </section>
-
-            <section id="skills" class="hidden">
-                 <h2><span class="prompt">></span> skills</h2>
-                 <ul>
-                     <li>Languages: JavaScript, Python, ...</li>
-                     <li>Frameworks: React, Node.js, ...</li>
-                     <li>Tools: Git, Docker, ...</li>
-                 </ul>
-            </section>
-
-            <section id="projects" class="hidden">
-                 <h2><span class="prompt">></span> projects</h2>
-                 <div>
-                     <h3>Project 1</h3>
-                     <p>Description of project 1...</p>
-                     <a href="#">Link</a>
-                 </div>
-                 <!-- Add more projects -->
-            </section>
-
-            <section id="experience" class="hidden">
-                <h2><span class="prompt">></span> experience</h2>
-                <div>
-                    <h3>Job Title - Company (Year-Year)</h3>
-                    <p>Description of role and achievements...</p>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">TechDemo</div>
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                <!-- Add more experience -->
-            </section>
-
-            <section id="contact" class="hidden">
-                 <h2><span class="prompt">></span> contact</h2>
-                 <p>Email: your.email@example.com</p>
-                 <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-                 <p>GitHub: <a href="#">github.com/yourusername</a></p>
-            </section>
-
-            <div class="input-line">
-                <span class="prompt">></span> <span id="input" contenteditable="true" spellcheck="false"></span><span class="cursor">_</span>
-            </div>
+            </nav>
         </div>
+    </header>
+    <section class="hero">
+        <h1>Innovative Digital Solutions</h1>
+        <p>We build world-class web, mobile, and enterprise applications for startups and businesses.</p>
+        <a href="#contact"><button class="cta-btn">Get in Touch</button></a>
+    </section>
+    <div class="container">
+        <section id="services" class="services">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Modern, scalable, and responsive websites tailored to your business needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Mobile Apps</h3>
+                <p>iOS and Android app development with seamless user experiences.</p>
+            </div>
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>Creative and intuitive designs that engage and delight your users.</p>
+            </div>
+        </section>
+        <section id="about" style="margin: 60px 0;">
+            <h2 style="color:#00e6e6;">About Us</h2>
+            <p style="color:#ccc;max-width:700px;margin:auto;">
+                We are a team of passionate developers and designers delivering cutting-edge digital products. Our mission is to empower businesses with technology that drives growth and innovation.
+            </p>
+        </section>
     </div>
-
-    <script src="script.js"></script> <!-- For interactivity later -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@techdemo.com</p>
+        <p>Phone: +1 234 567 8900</p>
+        <p>Location: Silicon Valley, CA</p>
+    </section>
 </body>
 </html>
